@@ -17,6 +17,7 @@
 		<glassfish.directory>C:\Users\Pierluigi\Desktop\dev\glassfish4\glassfish</glassfish.directory>
 		<glassfish.user>admin</glassfish.user>
 		<glassfish.password>admin</glassfish.password>
+		<glassfish.passFile>${glassfish.directory}\domains\${glassfish.domain.name}\config\passFile.txt</glassfish.passFile>
 		<glassfish.domain.name>domain1</glassfish.domain.name>
 	</properties>
 	
@@ -49,11 +50,12 @@
 			<plugin>
 				<groupId>org.glassfish.maven.plugin</groupId>
 				<artifactId>maven-glassfish-plugin</artifactId>
-				<version>${maven-glassfish-plugin.version}</version>
+				<version>${glassfish-plugin.version}</version>
 				<configuration>
 					<glassfishDirectory>${glassfish.directory}</glassfishDirectory>
 					<user>${glassfish.user}</user>
-					<adminPassword>${glassfish.password}</adminPassword>
+					<!-- adminPassword>${glassfish.password}</adminPassword -->
+                    <passwordFile>${glassfish.passFile}</passwordFile>
 					<domain>
                         <name>${glassfish.domain.name}</name>
                         <adminPort>4848</adminPort>
