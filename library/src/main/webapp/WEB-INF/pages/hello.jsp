@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h4>
-		<a href="hello.html">Click Here</a>
+		${message}
 	</h4>
 </body>
 </html>
